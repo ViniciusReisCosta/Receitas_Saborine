@@ -1,0 +1,70 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // O plugin do Flutter deve ser aplicado depois dos plugins do Android e Kotlin.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace = "br.com.cbersoftware.saborine"  // O namespace correto para o seu aplicativo
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "br.com.cbersoftware.saborine"  // O ID único do seu aplicativo
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    signingConfigs {
+        release {
+            keyAlias = keystoreProperties['keyAlias']
+            keyPassword = keystoreProperties['keyPassword']
+            storeFile = keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword = keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            // Configuração de assinatura correta para release
+            signingConfig signingConfigs.release
+            minifyEnabled true  // Habilitar ofuscação (opcional)
+            shrinkResources true  // Remover recursos não utilizados
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."  // Caminho do código Flutter
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'  // Para o tema e componentes do AppCompat
+    implementation 'androidx.core:core-ktx:1.6.0'        // Extensões Kotlin para o core do Android
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'  // Para layouts com restrições
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'   // Extensões para ciclo de vida
+    implementation 'com.google.android.material:material:1.3.0' // Para componentes de design material
+    implementation 'androidx.recyclerview:recyclerview:1.2.0' // RecyclerView para gerenciamento de listas
+}

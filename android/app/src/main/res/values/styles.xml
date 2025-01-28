@@ -1,0 +1,6 @@
+<resources>
+    <!-- Tema usado para a Splash Screen -->
+    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item> <!-- Referência ao arquivo splash_screen.xml -->
+    </style>
+</resources>

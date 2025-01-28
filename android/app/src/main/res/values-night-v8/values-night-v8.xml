@@ -1,0 +1,5 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Defina atributos adicionais para o tema escuro, se necessário -->
+    </style>
+</resources>

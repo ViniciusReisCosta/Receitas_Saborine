@@ -1,0 +1,7 @@
+<resources>
+    <color name="colorPrimary">#FF6200EE</color> <!-- Cor principal -->
+    <color name="colorPrimaryDark">#FF3700B3</color> <!-- Cor para barra de status -->
+    <color name="colorAccent">#FF03DAC5</color> <!-- Cor de destaque -->
+    <color name="ic_launcher_background">#FFFFFF</color> <!-- Cor do fundo do ícone -->
+    <color name="ic_launcher_foreground">#000000</color> <!-- Cor do ícone de primeiro plano -->
+</resources>

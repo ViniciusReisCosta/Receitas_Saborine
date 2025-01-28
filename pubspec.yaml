@@ -1,0 +1,43 @@
+name: saborine
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 4.0.0+5
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_mobile_ads: ^5.2.0   # Corrigido para a dependência correta de anúncios móveis
+  flutter_native_splash: ^2.4.4
+  in_app_purchase: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.2
+
+flutter_native_splash:
+   color: "#FFA500"  # Cor de fundo da tela de splash (pode ser ajustada)
+    # Caminho da imagem do logo (opcional)
+   android: true  # Ativa o splash para Android
+   ios: true     
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png # Caminho correto da imagem para o ícone
+
+flutter_icons:
+  android: true
+  ios: true
+  
+  image_path: "assets/logo.png"  # Caminho da imagem principal para o ícone
+  adaptive_icon_background: "#FFFFFF"  # Cor de fundo para o ícone adaptativo
+  adaptive_icon_foreground: "assets/logo.png"  # Imagem usada no ícone adaptativo
+
+  
