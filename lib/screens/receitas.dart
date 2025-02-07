@@ -2,7 +2,141 @@
 import 'package:saborine/models/recipets.dart';
 
 List<Recipe> getExampleRecipes() {
-  return [Recipe(
+  return [
+
+     Recipe(
+      title: 'Escondidinho de bacalhau',
+      description: 'Quem resiste a um escondidinho? Este aqui, feito com bacalhau e um purê de batatas bem cremoso, é delicioso e superelegante.',
+      imageUrl:'https://d1uz88p17r663j.cloudfront.net/original/33c52d63251a155e365a0fd355204416_escondidinho-bacalhau-receitas-nestle.jpg',
+      category: 'Pratos Principais',
+      ingredients: [
+    '2 batatas',
+
+    '1 colher (sopa) de manteiga',
+
+    '½ xícara (chá) de leite',
+
+    'noz-moscada ralada na hora a gosto',
+
+    'sal a gosto',
+    '1 lombo de bacalhau dessalgado e congelado',
+
+    '1 cebola picada',
+
+    '2 tomates sem pele nem sementes picados',
+
+    '½ xícara (chá) de azeitona verde sem caroço picada',
+    
+    '½ xícara (chá) de salsinha fresca picada',
+
+    '½ xícara (chá) de azeite',
+
+    '½ xícara (chá) de queijo parmesão ralado'
+      ],
+      steps: [
+       'Retire o pernil da geladeira, corte em pedaços grandes de cerca de 8 cm e descarte o excesso de gordura (caso a peça esteja com osso, mantenha ele preso a um dos pedaços). Transfira para uma travessa e tempere com o sal, o cominho e pimenta-do-reino. Deixe em temperatura ambiente enquanto prepara os outros ingredientes'
+      
+      'Descasque e pique fino as cebolas e os dentes de alho. Lave e seque a pimenta dedo-de-moça e o pimentão.'
+     
+     'Corte a pimenta dedo-de-moça ao meio, no sentido do comprimento. Com a ponta da faca, raspe e descarte as sementes e corte a pimenta em cubinhos. Dica: para evitar acidentes com dedos apimentados nos olhos, passe óleo ou azeite nas mãos depois de cortar as pimentas — a capsaicina, substância responsável pelo ardor, é lipossolúvel. Depois, lave as mãos com sabonete para tirar o óleo.',
+
+     'Descarte o cabo, as sementes e corte o pimentão em pedaços grandes. Descasque e corte o abacaxi em cubos grandes. No copo do liquidificador coloque o pimentão e os cubos de abacaxi. Junte a cachaça e bata até ficar liso. Sobre uma tigela, passe o suco por uma peneira, pressionando com as costas de uma colher. Reserve.',
+
+     'Leve ao fogo médio uma panela de pressão (sem a tampa) com capacidade para 6 litros. Quando aquecer, regue com 1 colher (sopa) de azeite e adicione quantos pedaços couberem, um ao lado do outro sem amontar. Deixe dourar por 3 minutos e vá virando com uma pinça para dourar todos os lados. Transfira para uma travessa e repita com o restante, regando a panela com ½ colher (sopa) de azeite a cada leva.',
+
+     'Mantenha a panela em fogo médio e regue com ½ colher (sopa) de azeite. Adicione a cebola, tempere com uma pitada de sal e refogue por 3 minutos, até murchar. Junte o alho, a pimenta dedo-de-moça e as folhas de louro, mexa por mais 1 minuto. Regue com o suco de abacaxi e pimentão e misture com a espátula, raspando bem o fundo da panela para dissolver os queimadinhos da carne - isso vai dar sabor ao molho.',
+
+     'Volte os pedaços de pernil à panela, feche a tampa e aumente o fogo. Assim que começar a apitar, abaixe o fogo e deixe cozinhar por 40 minutos.',
+
+     'Desligue o fogo e deixe todo o vapor sair e a panela parar de apitar. Abra a tampa e transfira o pernil para uma travessa. Reserve numa molheira (ou tigela) cerca de 1/3 do molho para servir a parte - o restante vai ser misturado ao pernil desfiado.',
+
+     'Com dois garfos, desfie a carne de porco e transfira para uma tigela de servir (caso tenha usado o osso, descarte). Se preferir, coloque os pedaços de pernil numa batedeira e bata em velocidade baixa, até desfiar toda a carne.',
+
+     'Junte o restante do molho ao pernil desfiado e misture bem. Prove e, se necessário, adicione sal e pimenta-do-reino. Salpique com folhas de coentro e sirva a seguir com o molho reservado.',
+      ],
+    ),
+
+     Recipe(
+      title: 'Pernil com molho de abacaxi e pimentão na pressão',
+      description: 'Sem preguiça, cozinheiro! A panela de pressão faz o trabalho pesado e deixa o preparo prático. O molho de abacaxi e pimentão faz toda (toda!) a diferença no prato. Sobrou? Transforme em sanduíche ou salada.',
+      imageUrl:
+          'https://img-global.cpcdn.com/recipes/2d7cfb1305708b0c/680x964cq70/foto-principal-da-receita-batata-gratinada-aos-dois-molhos.webp',
+      category: 'Pratos Principais',
+      ingredients: [
+      '1,5 kg de pernil suíno em peça sem osso',
+      '1 abacaxi',
+      '1 pimentão vermelho',
+      '1 xícara (chá) de cachaça',
+      '2 cebolas',
+      '3 dentes de alho',
+      '1 pimenta dedo-de-moça',
+      '3 colheres (sopa) de azeite',
+      '2 folhas de louro',
+      '2 colheres (chá) de cominho em pó',
+      '1 colher (sopa) de sal',
+      'pimenta-do-reino em grãos moída na hora a gosto',
+      'folhas de coentro a gosto',
+      ],
+      steps: [
+       'Retire o pernil da geladeira, corte em pedaços grandes de cerca de 8 cm e descarte o excesso de gordura (caso a peça esteja com osso, mantenha ele preso a um dos pedaços). Transfira para uma travessa e tempere com o sal, o cominho e pimenta-do-reino. Deixe em temperatura ambiente enquanto prepara os outros ingredientes'
+      
+      'Descasque e pique fino as cebolas e os dentes de alho. Lave e seque a pimenta dedo-de-moça e o pimentão.'
+     
+     'Corte a pimenta dedo-de-moça ao meio, no sentido do comprimento. Com a ponta da faca, raspe e descarte as sementes e corte a pimenta em cubinhos. Dica: para evitar acidentes com dedos apimentados nos olhos, passe óleo ou azeite nas mãos depois de cortar as pimentas — a capsaicina, substância responsável pelo ardor, é lipossolúvel. Depois, lave as mãos com sabonete para tirar o óleo.',
+
+     'Descarte o cabo, as sementes e corte o pimentão em pedaços grandes. Descasque e corte o abacaxi em cubos grandes. No copo do liquidificador coloque o pimentão e os cubos de abacaxi. Junte a cachaça e bata até ficar liso. Sobre uma tigela, passe o suco por uma peneira, pressionando com as costas de uma colher. Reserve.',
+
+     'Leve ao fogo médio uma panela de pressão (sem a tampa) com capacidade para 6 litros. Quando aquecer, regue com 1 colher (sopa) de azeite e adicione quantos pedaços couberem, um ao lado do outro sem amontar. Deixe dourar por 3 minutos e vá virando com uma pinça para dourar todos os lados. Transfira para uma travessa e repita com o restante, regando a panela com ½ colher (sopa) de azeite a cada leva.',
+
+     'Mantenha a panela em fogo médio e regue com ½ colher (sopa) de azeite. Adicione a cebola, tempere com uma pitada de sal e refogue por 3 minutos, até murchar. Junte o alho, a pimenta dedo-de-moça e as folhas de louro, mexa por mais 1 minuto. Regue com o suco de abacaxi e pimentão e misture com a espátula, raspando bem o fundo da panela para dissolver os queimadinhos da carne - isso vai dar sabor ao molho.',
+
+     'Volte os pedaços de pernil à panela, feche a tampa e aumente o fogo. Assim que começar a apitar, abaixe o fogo e deixe cozinhar por 40 minutos.',
+
+     'Desligue o fogo e deixe todo o vapor sair e a panela parar de apitar. Abra a tampa e transfira o pernil para uma travessa. Reserve numa molheira (ou tigela) cerca de 1/3 do molho para servir a parte - o restante vai ser misturado ao pernil desfiado.',
+
+     'Com dois garfos, desfie a carne de porco e transfira para uma tigela de servir (caso tenha usado o osso, descarte). Se preferir, coloque os pedaços de pernil numa batedeira e bata em velocidade baixa, até desfiar toda a carne.',
+
+     'Junte o restante do molho ao pernil desfiado e misture bem. Prove e, se necessário, adicione sal e pimenta-do-reino. Salpique com folhas de coentro e sirva a seguir com o molho reservado.',
+      ],
+    ),
+
+     Recipe(
+      title: 'Batata Gratinada aos Dois Molhos',
+      description: 'Delicioso bolo de chocolate macio e fofinho.',
+      imageUrl:
+          'https://img-global.cpcdn.com/recipes/2d7cfb1305708b0c/680x964cq70/foto-principal-da-receita-batata-gratinada-aos-dois-molhos.webp',
+      category: 'Pratos Principais',
+      ingredients: [
+      '800 g batatas',
+      '2 colheres (sopa) manteiga',
+      '2 colheres (sopa) farinha de trigo',
+      '1 creme de leite',
+      '200 g queijo muçarela',
+      '100 g queijo parmesão ralado',
+      '500 ml leite',
+      '1 sachê de molho de tomate',
+
+      ],
+      steps: [
+       'Descasque as batatas, corte-as em rodelas grossas e cozinhe em água com sal, com cuidado para não ficar muito mole. Escorra e reserve.',
+
+      'Em uma panela, derreta a manteiga, misture bem a farinha e mexa sem parar.',
+
+
+      'Junte aos poucos, o leite, até engrossar. Quando engrossar, cozinhe por mais 2 minutos.',
+
+
+      'Depois disso, desligue o fogo, acrescente o creme de leite e o parmesão ralado. Tempere com sal e noz-moscada',
+
+
+      'Em um refratário faça uma camadas de molho de tomate, batata e muçarela. Finalize com o molho branco e coloque mais um pouco de queijo por cima.',
+
+
+      'Leve ao forno, preaquecido a 180 graus por cerca de 40 minutos ou até dourar bem.',
+      ],
+    ),
+
+    Recipe(
       title: 'Bolinhas de queijo',
       description: 'Delicioso bolo de chocolate macio e fofinho.',
       imageUrl:

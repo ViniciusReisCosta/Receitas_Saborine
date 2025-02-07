@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/recipets.dart';
 
 class RecipeDetailScreen extends StatefulWidget {
@@ -14,16 +15,19 @@ class RecipeDetailScreen extends StatefulWidget {
 class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
   late BannerAd _bannerAd;
   bool _isBannerAdLoaded = false;
+  bool _isFavorite = false;
+  late SharedPreferences _prefs;
 
   @override
   void initState() {
     super.initState();
     _loadBannerAd();
+    _loadFavorites();
   }
 
   void _loadBannerAd() {
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-1251208414172228/7442175667', // Substitua pelo seu ID de unidade de anúncio
+      adUnitId: 'ca-app-pub-1251208414172228/7442175667',
       size: AdSize.banner,
       request: AdRequest(),
       listener: BannerAdListener(
@@ -41,6 +45,27 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     _bannerAd.load();
   }
 
+  Future<void> _loadFavorites() async {
+    _prefs = await SharedPreferences.getInstance();
+    List<String> favoriteRecipes = _prefs.getStringList('favoriteRecipes') ?? [];
+    setState(() {
+      _isFavorite = favoriteRecipes.contains(widget.recipe.title);
+    });
+  }
+
+  Future<void> _toggleFavorite() async {
+    List<String> favoriteRecipes = _prefs.getStringList('favoriteRecipes') ?? [];
+    setState(() {
+      if (_isFavorite) {
+        favoriteRecipes.remove(widget.recipe.title);
+      } else {
+        favoriteRecipes.add(widget.recipe.title);
+      }
+      _isFavorite = !_isFavorite;
+    });
+    await _prefs.setStringList('favoriteRecipes', favoriteRecipes);
+  }
+
   @override
   void dispose() {
     _bannerAd.dispose();
@@ -56,6 +81,15 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
       appBar: AppBar(
         title: Text(widget.recipe.title),
         backgroundColor: Colors.orange,
+        actions: [
+          IconButton(
+            icon: Icon(
+              _isFavorite ? Icons.favorite : Icons.favorite_border,
+              color: _isFavorite ? Colors.red : Colors.white,
+            ),
+            onPressed: _toggleFavorite,
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
